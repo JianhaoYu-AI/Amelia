@@ -17,7 +17,7 @@
     body {
       margin: 0;
       font-family: "Comic Sans MS", "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #fff7fb;
+      background: #fff2f8;
       color: #7a4b61;
       line-height: 1.8;
     }
@@ -29,9 +29,9 @@
     .page {
       max-width: 1040px;
       margin: 24px auto;
-      background: #fffdfd;
-      border: 8px solid #f29b1f;
-      border-radius: 30px;
+      background: #fff7fb;
+      border: 5px solid #f29b1f;
+      border-radius: 26px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(255, 180, 210, 0.25);
       position: relative;
@@ -42,8 +42,8 @@
       content: "";
       position: absolute;
       pointer-events: none;
-      border: 3px solid rgba(242, 155, 31, 0.25);
-      border-radius: 28px;
+      border: 2px solid rgba(242, 155, 31, 0.22);
+      border-radius: 24px;
       left: 10px;
       right: 10px;
       top: 10px;
@@ -60,12 +60,13 @@
 
     .hero {
       background:
-        radial-gradient(circle at 18% 20%, rgba(255, 182, 213, 0.45), transparent 22%),
-        radial-gradient(circle at 80% 30%, rgba(255, 210, 230, 0.6), transparent 24%),
-        linear-gradient(to bottom, #ffdceb, #ffeaf4);
+        radial-gradient(circle at 18% 20%, rgba(255, 170, 213, 0.55), transparent 24%),
+        radial-gradient(circle at 82% 28%, rgba(255, 210, 235, 0.9), transparent 26%),
+        radial-gradient(circle at 50% 80%, rgba(255, 185, 220, 0.35), transparent 32%),
+        linear-gradient(to bottom, #ffd4e8, #ffe7f2);
       text-align: center;
-      padding: 52px 20px 34px;
-      border-bottom: 5px solid #f29b1f;
+      padding: 50px 20px 34px;
+      border-bottom: 3px solid #f29b1f;
       position: relative;
       z-index: 1;
     }
@@ -73,7 +74,7 @@
     .hero-cat {
       width: 130px;
       height: 130px;
-      margin: 0 auto 16px;
+      margin: 0 auto 14px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -89,49 +90,56 @@
 
     .hero h1 {
       margin: 0;
-      font-size: 42px;
       color: #ef78a8;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-shadow: 2px 2px 0 #fff2a6;
+      font-size: 31px;
+      font-weight: 800;
+    }
+
+    .hero h1 .mili-word {
+      font-size: 50px;
+      color: #ef6fa4;
+      padding: 0 8px;
     }
 
     .hero p {
       margin: 10px 0 0;
       color: #e09014;
-      font-size: 20px;
+      font-size: 17px;
       font-weight: 700;
     }
 
     .hero-btn {
       display: inline-block;
-      margin-top: 18px;
-      padding: 8px 24px;
+      margin-top: 16px;
+      padding: 7px 22px;
       border-radius: 999px;
       background: #ff94bf;
       color: #fff;
-      border: 3px solid #f29b1f;
+      border: 2px solid #f29b1f;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 15px;
       transform: rotate(-1deg);
-      box-shadow: 0 4px 10px rgba(255, 145, 190, 0.25);
+      box-shadow: 0 4px 10px rgba(255, 145, 190, 0.22);
     }
 
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background: #fff5fb;
-      border-bottom: 5px solid #f29b1f;
+      background: #fff3fa;
+      border-bottom: 3px solid #f29b1f;
       position: relative;
       z-index: 1;
     }
 
     nav a {
-      padding: 14px 28px;
+      padding: 12px 24px;
       color: #e38b17;
       font-weight: 800;
-      font-size: 19px;
-      border-right: 3px solid #f29b1f;
+      font-size: 16px;
+      border-right: 2px solid #f29b1f;
       transition: all 0.2s ease;
     }
 
@@ -145,25 +153,27 @@
     }
 
     section {
-      padding: 42px 52px;
-      border-bottom: 4px solid #f29b1f;
+      padding: 40px 50px;
+      border-bottom: 3px solid #f29b1f;
       position: relative;
       z-index: 1;
     }
 
     .profile {
       display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 36px;
+      grid-template-columns: 180px 360px 240px;
+      justify-content: center;
       align-items: center;
+      column-gap: 34px;
+      row-gap: 20px;
       background:
-        radial-gradient(circle, rgba(255, 207, 226, 0.55) 8%, transparent 9%) 0 0 / 34px 34px,
+        radial-gradient(circle, rgba(255, 196, 222, 0.75) 0 9px, transparent 10px) 0 0 / 48px 48px,
         #fffafc;
     }
 
     .profile-avatar {
-      width: 220px;
-      height: 220px;
+      width: 170px;
+      height: 170px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -172,28 +182,56 @@
     }
 
     .profile-cat-img {
-      max-width: 200px;
-      max-height: 200px;
+      max-width: 160px;
+      max-height: 160px;
       width: auto;
       height: auto;
       display: block;
     }
 
+    .profile-info {
+      width: 100%;
+    }
+
+    .profile-photo-frame {
+      width: 220px;
+      height: 300px;
+      margin: 0 auto;
+      border: 2px solid #f29b1f;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.78);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      transform: rotate(1deg);
+      box-shadow: 0 6px 18px rgba(255, 165, 205, 0.18);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+    }
+
     .section-title {
-      margin: 0 0 18px;
+      margin: 0 0 16px;
       color: #ef78a8;
-      font-size: 34px;
-      letter-spacing: 2px;
+      font-size: 27px;
+      letter-spacing: 1px;
     }
 
     .profile-list {
-      font-size: 21px;
+      font-size: 19px;
       color: #ef78a8;
       font-weight: 700;
+      width: 100%;
     }
 
     .profile-list p {
-      margin: 8px 0;
+      margin: 7px 0;
     }
 
     .orange {
@@ -202,33 +240,33 @@
 
     .card {
       background: #fff8fb;
-      border: 3px dashed #ffafd2;
+      border: 2px dashed #ffafd2;
       border-radius: 22px;
-      padding: 24px;
-      margin-top: 18px;
-      transform: rotate(-0.35deg);
+      padding: 22px;
+      margin-top: 16px;
+      transform: rotate(-0.25deg);
     }
 
     .card p {
       margin: 0 0 10px;
-      font-size: 18px;
+      font-size: 17px;
       color: #84556a;
     }
 
     .card ul {
       margin: 6px 0 0;
       padding-left: 24px;
-      font-size: 18px;
+      font-size: 17px;
       color: #84556a;
     }
 
     .card li {
-      margin: 8px 0;
+      margin: 7px 0;
     }
 
     .item {
-      margin-bottom: 20px;
-      padding-bottom: 16px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
       border-bottom: 2px dashed #ffd2e5;
     }
 
@@ -240,20 +278,20 @@
     .item h3 {
       margin: 0 0 6px;
       color: #e09014;
-      font-size: 22px;
+      font-size: 20px;
     }
 
     .time {
       color: #ef78a8;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 15px;
     }
 
     .love-section {
       text-align: center;
       background: #fff;
-      padding-top: 48px;
-      padding-bottom: 56px;
+      padding-top: 42px;
+      padding-bottom: 52px;
     }
 
     .love-wrap {
@@ -302,7 +340,7 @@
     }
 
     .days {
-      font-size: 56px;
+      font-size: 54px;
       color: #f081ae;
       font-weight: 800;
       letter-spacing: 2px;
@@ -326,7 +364,7 @@
     .loading-text {
       margin-top: 18px;
       color: #e09014;
-      font-size: 34px;
+      font-size: 32px;
       font-weight: 800;
       letter-spacing: 4px;
       transform: rotate(-1deg);
@@ -334,7 +372,7 @@
 
     .contact p {
       margin: 8px 0;
-      font-size: 19px;
+      font-size: 18px;
       color: #84556a;
     }
 
@@ -343,10 +381,23 @@
       color: #c47922;
       text-align: center;
       padding: 22px;
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 700;
       position: relative;
       z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      .profile {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .profile-photo-frame {
+        width: 220px;
+        height: 285px;
+      }
     }
 
     @media (max-width: 780px) {
@@ -358,20 +409,19 @@
       nav a {
         width: 50%;
         text-align: center;
-        border-bottom: 3px solid #f29b1f;
-      }
-
-      .profile {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .profile-avatar {
-        margin-bottom: 10px;
+        border-bottom: 2px solid #f29b1f;
       }
 
       section {
-        padding: 34px 24px;
+        padding: 32px 22px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .hero h1 .mili-word {
+        font-size: 40px;
       }
 
       .love-row {
@@ -403,7 +453,7 @@
         <img src="kitty.png" alt="小猫" class="hero-cat-img" />
       </div>
 
-      <h1>欢迎来到米粒的世界</h1>
+      <h1>欢迎来到 <span class="mili-word">米粒</span> 的世界</h1>
       <p>教育、成长、热爱与一点点粉色魔法</p>
       <a class="hero-btn" href="#profile">点击进入</a>
     </header>
@@ -424,7 +474,7 @@
         <img src="kitty.png" alt="小猫" class="profile-cat-img" />
       </div>
 
-      <div>
+      <div class="profile-info">
         <h2 class="section-title">Profile</h2>
         <div class="profile-list">
           <p>姓名：<span class="orange">陈萱语</span></p>
@@ -434,6 +484,10 @@
           <p>外语水平：<span class="orange">CET-6</span></p>
           <p>导师：<span class="orange">保密</span></p>
         </div>
+      </div>
+
+      <div class="profile-photo-frame">
+        <img src="mili-photo.jpg" alt="陈萱语照片" class="profile-photo" />
       </div>
     </section>
 
