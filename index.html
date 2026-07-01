@@ -165,7 +165,7 @@
 
     .profile {
       display: grid;
-      grid-template-columns: 170px 360px 260px;
+      grid-template-columns: 210px 390px 260px;
       justify-content: center;
       align-items: center;
       column-gap: 30px;
@@ -176,8 +176,8 @@
     }
 
     .profile-avatar {
-      width: 165px;
-      height: 165px;
+      width: 200px;
+      height: 200px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -186,8 +186,8 @@
     }
 
     .profile-cat-img {
-      max-width: 155px;
-      max-height: 155px;
+      max-width: 190px;
+      max-height: 190px;
       width: auto;
       height: auto;
       display: block;
@@ -197,19 +197,28 @@
       width: 100%;
     }
 
+    .profile-info-card {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 24px;
+      padding: 22px 26px;
+      box-shadow: 0 6px 18px rgba(255, 184, 210, 0.18);
+      border: 2px solid rgba(255, 186, 216, 0.45);
+    }
+
     .profile-photo-frame {
       width: 245px;
       height: 330px;
       margin: 0 auto;
       border: 2px solid #f29b1f;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.90);
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 8px;
       transform: rotate(1deg);
       box-shadow: 0 6px 18px rgba(255, 165, 205, 0.18);
+      overflow: hidden;
     }
 
     .profile-photo {
@@ -319,14 +328,13 @@
       width: 82px;
       height: 82px;
       border: 4px solid #ff92c2;
-      border-radius: 45% 55% 50% 50% / 52% 48% 55% 45%;
+      border-radius: 50%;
       background: #ffeaf4;
       color: #ff78af;
       font-size: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
       box-shadow: 0 4px 12px rgba(255, 160, 200, 0.2);
     }
 
@@ -352,17 +360,40 @@
       line-height: 1.1;
     }
 
-    .heart {
-      margin-top: 2px;
-      font-size: 34px;
-      color: #ff7eae;
-      line-height: 1;
+    .heart-bubble {
+      position: relative;
+      width: 34px;
+      height: 30px;
+      margin-top: 8px;
+      transform: rotate(-45deg);
+      background: #ff9fc6;
+      border-radius: 8px;
+    }
+
+    .heart-bubble::before,
+    .heart-bubble::after {
+      content: "";
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      background: #ff9fc6;
+      border-radius: 50%;
+    }
+
+    .heart-bubble::before {
+      top: -17px;
+      left: 0;
+    }
+
+    .heart-bubble::after {
+      top: 0;
+      left: 17px;
     }
 
     .heartbeat {
       width: 100%;
       height: 42px;
-      margin: 6px auto 18px;
+      margin: 18px auto 18px;
       display: block;
     }
 
@@ -417,6 +448,16 @@
       .profile-photo-frame {
         width: 240px;
         height: 320px;
+      }
+
+      .profile-avatar {
+        width: 180px;
+        height: 180px;
+      }
+
+      .profile-cat-img {
+        max-width: 170px;
+        max-height: 170px;
       }
     }
 
@@ -503,14 +544,16 @@
       </div>
 
       <div class="profile-info">
-        <h2 class="section-title">Profile</h2>
-        <div class="profile-list">
-          <p>姓名：<span class="orange">陈萱语</span></p>
-          <p>本科：吉林外国语大学（本科）</p>
-          <p>研究生：中央民族大学（硕士）</p>
-          <p>专业方向：<span class="orange">教育学 & 英语辅修</span></p>
-          <p>外语水平：<span class="orange">CET-6</span></p>
-          <p>导师：<span class="orange">保密</span></p>
+        <div class="profile-info-card">
+          <h2 class="section-title">Profile</h2>
+          <div class="profile-list">
+            <p>姓名：<span class="orange">陈萱语</span></p>
+            <p>本科：吉林外国语大学（本科）</p>
+            <p>研究生：中央民族大学（硕士）</p>
+            <p>专业方向：<span class="orange">教育学 & 英语辅修</span></p>
+            <p>外语水平：<span class="orange">CET-6</span></p>
+            <p>导师：<span class="orange">保密</span></p>
+          </div>
         </div>
       </div>
 
@@ -619,7 +662,7 @@
 
           <div class="love-center">
             <div class="days">296天</div>
-            <div class="heart">♡</div>
+            <div class="heart-bubble"></div>
           </div>
 
           <div class="love-icon right">米粒</div>
