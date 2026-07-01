@@ -99,44 +99,6 @@
       box-shadow: 0 4px 10px rgba(255, 145, 190, 0.22);
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      background: #fff5fb;
-      border-bottom: 3px solid #f39a16;
-    }
-
-    nav a {
-      padding: 12px 22px;
-      color: #e58b13;
-      font-size: 16px;
-      border-right: 2px solid #f39a16;
-    }
-
-    nav a:last-child {
-      border-right: none;
-    }
-
-    nav a:hover {
-      background: #ffe3f0;
-      color: #ef5c9b;
-    }
-
-    section {
-      padding: 42px 46px;
-      border-bottom: 3px solid #f39a16;
-    }
-
-    .section-title {
-      margin: 0 0 18px;
-      color: #ef78a8;
-      font-size: 40px;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
-
-    /* Profile：按照手绘图改成左猫右文字，照片直接放旁边 */
     .profile {
       display: grid;
       grid-template-columns: 860px 260px;
@@ -147,6 +109,7 @@
       background:
         radial-gradient(circle, rgba(255, 205, 229, 0.85) 0 12px, transparent 13px) 0 0 / 58px 58px,
         #fffafc;
+      border-bottom: 3px solid #f39a16;
     }
 
     .profile-main-box {
@@ -220,6 +183,51 @@
       display: block;
       border-radius: 18px;
       box-shadow: 0 8px 22px rgba(180, 120, 150, 0.18);
+    }
+
+    /* 导航栏：现在放在 Profile 下面，模仿手绘图底部导航条 */
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #fff5fb;
+      border-bottom: 3px solid #f39a16;
+    }
+
+    nav a {
+      min-width: 130px;
+      padding: 13px 18px;
+      color: #e58b13;
+      font-size: 16px;
+      text-align: center;
+      border-right: 2px solid #f39a16;
+      transition: all 0.2s ease;
+    }
+
+    nav a:first-child {
+      border-left: none;
+    }
+
+    nav a:last-child {
+      border-right: none;
+    }
+
+    nav a:hover {
+      background: #ffe3f0;
+      color: #ef5c9b;
+    }
+
+    section {
+      padding: 42px 46px;
+      border-bottom: 3px solid #f39a16;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      color: #ef78a8;
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: 1px;
     }
 
     .card {
@@ -407,6 +415,7 @@
 
       nav a {
         width: 50%;
+        min-width: auto;
         text-align: center;
         border-bottom: 2px solid #f39a16;
       }
@@ -506,18 +515,6 @@
       <a class="enter-btn" href="#profile">点击进入</a>
     </header>
 
-    <nav>
-      <a href="#home">网站首页</a>
-      <a href="#profile">Profile</a>
-      <a href="#about">关于米粒</a>
-      <a href="#teaching">实习经历</a>
-      <a href="#work">学生工作</a>
-      <a href="#papers">论文发表</a>
-      <a href="#awards">获奖情况</a>
-      <a href="#love">小世界</a>
-      <a href="#contact">联系方式</a>
-    </nav>
-
     <section class="profile" id="profile">
       <div class="profile-main-box">
         <div class="profile-kitty">
@@ -541,6 +538,18 @@
         <img src="mili-photo.jpg" alt="陈萱语照片">
       </div>
     </section>
+
+    <nav>
+      <a href="#home">网站首页</a>
+      <a href="#profile">Profile</a>
+      <a href="#about">关于米粒</a>
+      <a href="#teaching">实习经历</a>
+      <a href="#work">学生工作</a>
+      <a href="#papers">论文发表</a>
+      <a href="#awards">获奖情况</a>
+      <a href="#love">小世界</a>
+      <a href="#contact">联系方式</a>
+    </nav>
 
     <section id="about">
       <h2 class="section-title">关于米粒</h2>
