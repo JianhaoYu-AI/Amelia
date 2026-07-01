@@ -31,8 +31,8 @@
     }
 
     .page {
-      max-width: 1280px;
-      margin: 24px auto;
+      max-width: 1400px;
+      margin: 20px auto;
       background: #fff9fc;
       border: 5px solid #f39a16;
       border-radius: 26px;
@@ -42,7 +42,7 @@
 
     .hero {
       text-align: center;
-      padding: 48px 20px 34px;
+      padding: 46px 20px 32px;
       background:
         radial-gradient(circle, rgba(255, 205, 229, 0.85) 0 12px, transparent 13px) 0 0 / 58px 58px,
         linear-gradient(to bottom, #ffd3e8, #ffe8f3);
@@ -50,8 +50,8 @@
     }
 
     .hero-kitty {
-      width: 210px;
-      height: 210px;
+      width: 200px;
+      height: 200px;
       margin: 0 auto 18px;
       display: flex;
       align-items: center;
@@ -63,20 +63,20 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      border-radius: 18px;
+      border-radius: 16px;
     }
 
     .hero h1 {
       margin: 0;
       color: #ef78a8;
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 400;
       letter-spacing: 2px;
       text-shadow: 2px 2px 0 #fff2a8;
     }
 
     .hero h1 .mili {
-      font-size: 56px;
+      font-size: 58px;
       color: #ed6fa3;
       padding: 0 8px;
     }
@@ -84,13 +84,13 @@
     .hero p {
       margin: 10px 0 0;
       color: #e58b13;
-      font-size: 17px;
+      font-size: 18px;
     }
 
     .enter-btn {
       display: inline-block;
       margin-top: 16px;
-      padding: 7px 24px;
+      padding: 8px 24px;
       color: #fff;
       background: #ff92bd;
       border: 2px solid #f39a16;
@@ -99,13 +99,14 @@
       box-shadow: 0 4px 10px rgba(255, 145, 190, 0.22);
     }
 
+    /* ===== 重点修改的 Profile 区域 ===== */
     .profile {
       display: grid;
-      grid-template-columns: 860px 260px;
+      grid-template-columns: minmax(0, 1080px) 320px;
       justify-content: center;
       align-items: center;
       gap: 34px;
-      padding: 46px 36px;
+      padding: 58px 34px 34px;
       background:
         radial-gradient(circle, rgba(255, 205, 229, 0.85) 0 12px, transparent 13px) 0 0 / 58px 58px,
         #fffafc;
@@ -113,56 +114,57 @@
     }
 
     .profile-main-box {
-      min-height: 360px;
+      min-height: 585px;
       display: grid;
-      grid-template-columns: 300px 1fr;
-      background: rgba(255, 255, 255, 0.86);
+      grid-template-columns: 380px 1fr;
+      background: rgba(255, 255, 255, 0.88);
       border: 5px solid #f45f68;
-      border-radius: 24px;
+      border-radius: 28px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(255, 160, 190, 0.18);
+      box-shadow: 0 8px 20px rgba(255, 160, 190, 0.16);
     }
 
     .profile-kitty {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 24px;
+      padding: 30px;
       border-right: 5px solid #f45f68;
-      background: rgba(255, 255, 255, 0.62);
+      background: rgba(255, 255, 255, 0.7);
     }
 
     .profile-kitty img {
-      width: 220px;
+      width: 280px;
       max-width: 100%;
       height: auto;
       display: block;
-      transform: rotate(-2deg);
     }
 
     .profile-card {
-      padding: 32px 42px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.72);
+      padding: 44px 48px;
+      background: rgba(255, 255, 255, 0.8);
     }
 
     .profile-card .section-title {
-      font-size: 48px;
-      margin-bottom: 14px;
+      margin: 0 0 18px;
+      font-size: 58px;
+      line-height: 1;
       color: #ef78a8;
+      font-weight: 400;
     }
 
     .profile-list {
-      font-size: 29px;
-      line-height: 1.7;
+      font-size: 30px;
+      line-height: 1.95;
       letter-spacing: 1px;
-      color: #f087ad;
+      color: #f08ab0;
     }
 
     .profile-list p {
-      margin: 8px 0;
+      margin: 0 0 6px;
     }
 
     .orange {
@@ -170,42 +172,38 @@
     }
 
     .direct-photo {
-      width: 260px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     .direct-photo img {
-      width: 250px;
-      height: 350px;
+      width: 300px;
+      height: 440px;
       object-fit: cover;
       display: block;
-      border-radius: 18px;
+      border-radius: 24px;
       box-shadow: 0 8px 22px rgba(180, 120, 150, 0.18);
     }
 
-    /* 导航栏：现在放在 Profile 下面，模仿手绘图底部导航条 */
+    /* ===== 导航栏放在 Profile 下方 ===== */
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       background: #fff5fb;
+      border-top: 3px solid #f39a16;
       border-bottom: 3px solid #f39a16;
     }
 
     nav a {
       min-width: 130px;
-      padding: 13px 18px;
+      padding: 14px 18px;
       color: #e58b13;
       font-size: 16px;
       text-align: center;
       border-right: 2px solid #f39a16;
       transition: all 0.2s ease;
-    }
-
-    nav a:first-child {
-      border-left: none;
     }
 
     nav a:last-child {
@@ -315,7 +313,7 @@
     }
 
     .love-center {
-      width: 220px;
+      width: 240px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -323,19 +321,19 @@
 
     .days {
       color: #f081ae;
-      font-size: 56px;
+      font-size: 60px;
       line-height: 1.1;
       letter-spacing: 2px;
     }
 
     .heart {
       position: relative;
-      width: 56px;
-      height: 50px;
+      width: 66px;
+      height: 60px;
       margin-top: 18px;
       background: #ff8fbd;
       transform: rotate(-45deg);
-      border-radius: 14px;
+      border-radius: 16px;
       box-shadow: 0 6px 14px rgba(255, 143, 189, 0.28);
     }
 
@@ -343,20 +341,20 @@
     .heart::after {
       content: "";
       position: absolute;
-      width: 56px;
-      height: 56px;
+      width: 66px;
+      height: 66px;
       background: #ff8fbd;
       border-radius: 50%;
     }
 
     .heart::before {
-      top: -28px;
+      top: -33px;
       left: 0;
     }
 
     .heart::after {
       top: 0;
-      left: 28px;
+      left: 33px;
     }
 
     .heartbeat {
@@ -382,59 +380,27 @@
       font-size: 16px;
     }
 
-    @media (max-width: 1150px) {
+    @media (max-width: 1250px) {
       .profile {
         grid-template-columns: 1fr;
       }
 
       .profile-main-box {
-        width: 860px;
-        max-width: 100%;
+        width: 100%;
+        max-width: 1080px;
         margin: 0 auto;
       }
 
-      .direct-photo {
-        width: 100%;
-      }
-
       .direct-photo img {
-        width: 260px;
-        height: 360px;
+        width: 300px;
+        height: 420px;
       }
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 860px) {
       .page {
         margin: 0;
         border-radius: 0;
-      }
-
-      section {
-        padding: 32px 22px;
-      }
-
-      nav a {
-        width: 50%;
-        min-width: auto;
-        text-align: center;
-        border-bottom: 2px solid #f39a16;
-      }
-
-      .hero-kitty {
-        width: 170px;
-        height: 170px;
-      }
-
-      .hero h1 {
-        font-size: 24px;
-      }
-
-      .hero h1 .mili {
-        font-size: 42px;
-      }
-
-      .section-title {
-        font-size: 34px;
       }
 
       .profile-main-box {
@@ -447,7 +413,7 @@
       }
 
       .profile-kitty img {
-        width: 210px;
+        width: 220px;
       }
 
       .profile-card {
@@ -455,48 +421,27 @@
       }
 
       .profile-card .section-title {
-        font-size: 38px;
-      }
-
-      .profile-list {
-        font-size: 21px;
-      }
-
-      .love-row {
-        gap: 28px;
-      }
-
-      .love-icon {
-        width: 66px;
-        height: 66px;
-        font-size: 20px;
-      }
-
-      .days {
         font-size: 42px;
       }
 
-      .loading-text {
-        font-size: 28px;
+      .profile-list {
+        font-size: 22px;
+        line-height: 1.8;
       }
 
-      .heart {
-        width: 44px;
-        height: 40px;
+      nav a {
+        width: 50%;
+        min-width: auto;
+        border-bottom: 2px solid #f39a16;
       }
 
-      .heart::before,
-      .heart::after {
-        width: 44px;
-        height: 44px;
+      .direct-photo img {
+        width: 250px;
+        height: 360px;
       }
 
-      .heart::before {
-        top: -22px;
-      }
-
-      .heart::after {
-        left: 22px;
+      .hero h1 .mili {
+        font-size: 44px;
       }
     }
   </style>
@@ -553,7 +498,6 @@
 
     <section id="about">
       <h2 class="section-title">关于米粒</h2>
-
       <div class="card">
         <p>
           这里是米粒的个人主页。她本科就读于吉林外国语大学，研究生阶段将在中央民族大学继续深耕教育学方向。
@@ -598,7 +542,6 @@
 
     <section id="work">
       <h2 class="section-title">学生工作</h2>
-
       <div class="card">
         <div class="item">
           <h3>吉林外国语大学校团委宣传部部长</h3>
@@ -622,7 +565,6 @@
 
     <section id="papers">
       <h2 class="section-title">论文发表</h2>
-
       <div class="card">
         <ul>
           <li>《优秀劳动教育教师的培育——基于劳动教育目标的素质结构与培育路径研究》</li>
@@ -633,7 +575,6 @@
 
     <section id="awards">
       <h2 class="section-title">获奖情况</h2>
-
       <div class="card">
         <ul>
           <li>2025 年中国国际大学生创新大赛国家铜奖</li>
@@ -675,7 +616,6 @@
 
     <section id="contact">
       <h2 class="section-title">联系方式</h2>
-
       <div class="card">
         <p>邮箱：2534009829@qq.com</p>
         <p>小世界入口：正在建设中...</p>
@@ -685,19 +625,15 @@
     <footer>
       米粒的世界 · 正在慢慢长大中
     </footer>
-
   </div>
 
   <script>
     const startDate = new Date("2025-05-31T00:00:00");
-
     const today = new Date();
     const todayZero = new Date(today.getFullYear(), today.getMonth(), today.getDate());
     const startZero = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
-
     const diffTime = todayZero - startZero;
     const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
     document.getElementById("dayCount").textContent = diffDays;
   </script>
 </body>
