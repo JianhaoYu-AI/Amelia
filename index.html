@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>米粒的世界</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #fff5fb;
+      color: #75465c;
+      line-height: 1.8;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 30px auto;
+      background: #fffdfd;
+      border: 8px solid #f2a11f;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(255, 173, 210, 0.35);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 187, 220, 0.55), transparent 28%),
+        radial-gradient(circle at 80% 40%, rgba(255, 218, 235, 0.8), transparent 30%),
+        #ffd9ec;
+      text-align: center;
+      padding: 52px 24px 36px;
+      border-bottom: 5px solid #f2a11f;
+    }
+
+    .cat-box {
+      width: 110px;
+      height: 90px;
+      margin: 0 auto 20px;
+      border: 4px solid #f2a11f;
+      border-radius: 16px;
+      background: #fff8fb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+
+    h1 {
+      margin: 0;
+      color: #ef7aa7;
+      font-size: 42px;
+      letter-spacing: 4px;
+      text-shadow: 2px 2px 0 #fff2a8;
+    }
+
+    .hero p {
+      margin: 12px 0 0;
+      color: #e18a17;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .enter-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 8px 24px;
+      background: #ff8fbe;
+      color: white;
+      border-radius: 999px;
+      border: 3px solid #f2a11f;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #fff3fa;
+      border-bottom: 5px solid #f2a11f;
+    }
+
+    nav a {
+      padding: 14px 38px;
+      color: #e18a17;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 20px;
+      border-right: 3px solid #f2a11f;
+    }
+
+    nav a:last-child {
+      border-right: none;
+    }
+
+    nav a:hover {
+      background: #ffe0ef;
+      color: #ef5f9c;
+    }
+
+    section {
+      padding: 42px 54px;
+      border-bottom: 4px solid #f2a11f;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 36px;
+      align-items: center;
+      background:
+        radial-gradient(circle, #ffd2e7 12%, transparent 13%) 0 0 / 34px 34px,
+        #fffaff;
+    }
+
+    .kitty {
+      width: 190px;
+      height: 190px;
+      border-radius: 28px;
+      background: white;
+      border: 4px solid #ff9bc6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 82px;
+      box-shadow: 0 6px 18px rgba(255, 150, 200, 0.25);
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: #ef7aa7;
+      font-size: 34px;
+      letter-spacing: 2px;
+    }
+
+    .profile-list {
+      font-size: 22px;
+      color: #ef7aa7;
+      font-weight: 700;
+    }
+
+    .profile-list p {
+      margin: 8px 0;
+    }
+
+    .orange {
+      color: #e18a17;
+    }
+
+    .card {
+      background: #fff8fb;
+      border: 3px dashed #ffacd0;
+      border-radius: 22px;
+      padding: 24px;
+      margin-top: 18px;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 70px 24px;
+      background: #fff;
+    }
+
+    .loading-icons {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      color: #ff9bc6;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .days {
+      font-size: 34px;
+      color: #ef7aa7;
+      font-weight: 800;
+    }
+
+    .heart {
+      font-size: 32px;
+      color: #ff80b5;
+    }
+
+    .loading-text {
+      margin-top: 28px;
+      color: #e18a17;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #c47a21;
+      background: #fff3fa;
+      font-weight: 700;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .profile {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .kitty {
+        margin: 0 auto;
+      }
+
+      section {
+        padding: 34px 24px;
+      }
+
+      nav a {
+        width: 50%;
+        text-align: center;
+        border-bottom: 3px solid #f2a11f;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="hero" id="home">
+      <div class="cat-box">🐱</div>
+      <h1>欢迎来到米粒的世界</h1>
+      <p>点击进入一颗粉色小星球</p>
+      <a class="enter-btn" href="#profile">点击进入</a>
+    </header>
+
+    <nav>
+      <a href="#home">网站首页</a>
+      <a href="#profile">介绍</a>
+      <a href="#about">简介</a>
+      <a href="#contact">联系方式</a>
+    </nav>
+
+    <section class="profile" id="profile">
+      <div class="kitty">🎀</div>
+
+      <div>
+        <h2>Profile</h2>
+        <div class="profile-list">
+          <p>吉林外国语大学 · 本科</p>
+          <p>中央民族大学 · 硕士</p>
+          <p>研究方向：<span class="orange">教育学</span></p>
+          <p>导师：<span class="orange">保密</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>关于米粒</h2>
+      <div class="card">
+        <p>
+          这里是米粒的个人主页。她喜欢温柔、可爱、粉色和充满生命力的小世界。
+          目前正在教育学方向继续学习，希望把成长、教育、热爱和生活都慢慢记录下来。
+        </p>
+      </div>
+    </section>
+
+    <section class="loading">
+      <div class="loading-icons">
+        <span>🎙️</span>
+        <span>👓</span>
+      </div>
+
+      <div class="days">296 天</div>
+      <div class="heart">♡</div>
+      <div class="loading-text">加载中...</div>
+    </section>
+
+    <section id="contact">
+      <h2>联系方式</h2>
+      <div class="card">
+        <p>邮箱：后续补充</p>
+        <p>小世界入口：正在建设中...</p>
+      </div>
+    </section>
+
+    <footer>
+      米粒的世界 · 正在慢慢长大中
+    </footer>
+
+  </div>
+</body>
+</html>
