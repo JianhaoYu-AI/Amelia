@@ -6,9 +6,13 @@
   <title>米粒的世界 | 陈萱语</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -18,7 +22,9 @@
       line-height: 1.8;
     }
 
-    a { text-decoration: none; }
+    a {
+      text-decoration: none;
+    }
 
     .page {
       max-width: 1040px;
@@ -65,18 +71,20 @@
     }
 
     .hero-cat {
-      width: 112px;
-      height: 92px;
+      width: 130px;
+      height: 130px;
       margin: 0 auto 16px;
-      background: #fff8fc;
-      border: 4px solid #f29b1f;
-      border-radius: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 46px;
-      color: #ef78a8;
       transform: rotate(-2deg);
+    }
+
+    .hero-cat-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
     }
 
     .hero h1 {
@@ -127,7 +135,9 @@
       transition: all 0.2s ease;
     }
 
-    nav a:last-child { border-right: none; }
+    nav a:last-child {
+      border-right: none;
+    }
 
     nav a:hover {
       background: #ffe5f1;
@@ -152,19 +162,21 @@
     }
 
     .profile-avatar {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       margin: 0 auto;
-      border-radius: 30px;
-      background: #fff;
-      border: 4px solid #ff9dc7;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 82px;
-      color: #ff8fbd;
       transform: rotate(-2deg);
-      box-shadow: 0 6px 18px rgba(255, 165, 205, 0.24);
+    }
+
+    .profile-cat-img {
+      max-width: 200px;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+      display: block;
     }
 
     .section-title {
@@ -180,9 +192,13 @@
       font-weight: 700;
     }
 
-    .profile-list p { margin: 8px 0; }
+    .profile-list p {
+      margin: 8px 0;
+    }
 
-    .orange { color: #e09014; }
+    .orange {
+      color: #e09014;
+    }
 
     .card {
       background: #fff8fb;
@@ -206,7 +222,9 @@
       color: #84556a;
     }
 
-    .card li { margin: 8px 0; }
+    .card li {
+      margin: 8px 0;
+    }
 
     .item {
       margin-bottom: 20px;
@@ -268,8 +286,13 @@
       box-shadow: 0 4px 12px rgba(255, 160, 200, 0.2);
     }
 
-    .love-icon.left { transform: rotate(-6deg); }
-    .love-icon.right { transform: rotate(6deg); }
+    .love-icon.left {
+      transform: rotate(-6deg);
+    }
+
+    .love-icon.right {
+      transform: rotate(6deg);
+    }
 
     .love-center {
       min-width: 220px;
@@ -376,7 +399,10 @@
   <div class="page">
 
     <header class="hero" id="home">
-      <div class="hero-cat">🎀</div>
+      <div class="hero-cat">
+        <img src="kitty.png" alt="小猫" class="hero-cat-img" />
+      </div>
+
       <h1>欢迎来到米粒的世界</h1>
       <p>教育、成长、热爱与一点点粉色魔法</p>
       <a class="hero-btn" href="#profile">点击进入</a>
@@ -394,7 +420,9 @@
     </nav>
 
     <section class="profile" id="profile">
-      <div class="profile-avatar">🐱</div>
+      <div class="profile-avatar">
+        <img src="kitty.png" alt="小猫" class="profile-cat-img" />
+      </div>
 
       <div>
         <h2 class="section-title">Profile</h2>
@@ -481,12 +509,8 @@
 
       <div class="card">
         <ul>
-          <li>
-            《优秀劳动教育教师的培育——基于劳动教育目标的素质结构与培育路径研究》
-          </li>
-          <li>
-            《小学语文课程与劳动教育融合路径研究》
-          </li>
+          <li>《优秀劳动教育教师的培育——基于劳动教育目标的素质结构与培育路径研究》</li>
+          <li>《小学语文课程与劳动教育融合路径研究》</li>
         </ul>
       </div>
     </section>
