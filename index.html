@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>米粒的世界 | 陈萱语</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
@@ -16,8 +20,8 @@
 
     body {
       margin: 0;
-      font-family: "Comic Sans MS", "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #fff2f8;
+      font-family: "ZCOOL KuaiLe", "Ma Shan Zheng", "YouYuan", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #fff1f8;
       color: #7a4b61;
       line-height: 1.8;
     }
@@ -60,10 +64,11 @@
 
     .hero {
       background:
-        radial-gradient(circle at 18% 20%, rgba(255, 170, 213, 0.55), transparent 24%),
-        radial-gradient(circle at 82% 28%, rgba(255, 210, 235, 0.9), transparent 26%),
-        radial-gradient(circle at 50% 80%, rgba(255, 185, 220, 0.35), transparent 32%),
-        linear-gradient(to bottom, #ffd4e8, #ffe7f2);
+        radial-gradient(circle at 15% 18%, rgba(255, 156, 205, 0.45), transparent 24%),
+        radial-gradient(circle at 82% 28%, rgba(255, 210, 235, 0.95), transparent 27%),
+        radial-gradient(circle at 50% 82%, rgba(255, 185, 220, 0.42), transparent 34%),
+        radial-gradient(circle at 28% 70%, rgba(255, 226, 241, 0.9), transparent 26%),
+        linear-gradient(to bottom, #ffd2e7, #ffe8f3);
       text-align: center;
       padding: 50px 20px 34px;
       border-bottom: 3px solid #f29b1f;
@@ -91,14 +96,14 @@
     .hero h1 {
       margin: 0;
       color: #ef78a8;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       text-shadow: 2px 2px 0 #fff2a6;
-      font-size: 31px;
-      font-weight: 800;
+      font-size: 30px;
+      font-weight: 400;
     }
 
     .hero h1 .mili-word {
-      font-size: 50px;
+      font-size: 54px;
       color: #ef6fa4;
       padding: 0 8px;
     }
@@ -106,8 +111,8 @@
     .hero p {
       margin: 10px 0 0;
       color: #e09014;
-      font-size: 17px;
-      font-weight: 700;
+      font-size: 16px;
+      font-weight: 400;
     }
 
     .hero-btn {
@@ -118,7 +123,7 @@
       background: #ff94bf;
       color: #fff;
       border: 2px solid #f29b1f;
-      font-weight: 700;
+      font-weight: 400;
       font-size: 15px;
       transform: rotate(-1deg);
       box-shadow: 0 4px 10px rgba(255, 145, 190, 0.22);
@@ -137,8 +142,7 @@
     nav a {
       padding: 12px 24px;
       color: #e38b17;
-      font-weight: 800;
-      font-size: 16px;
+      font-size: 15px;
       border-right: 2px solid #f29b1f;
       transition: all 0.2s ease;
     }
@@ -161,19 +165,19 @@
 
     .profile {
       display: grid;
-      grid-template-columns: 180px 360px 240px;
+      grid-template-columns: 170px 360px 260px;
       justify-content: center;
       align-items: center;
-      column-gap: 34px;
+      column-gap: 30px;
       row-gap: 20px;
       background:
-        radial-gradient(circle, rgba(255, 196, 222, 0.75) 0 9px, transparent 10px) 0 0 / 48px 48px,
+        radial-gradient(circle, rgba(255, 208, 227, 0.78) 0 10px, transparent 11px) 0 0 / 54px 54px,
         #fffafc;
     }
 
     .profile-avatar {
-      width: 170px;
-      height: 170px;
+      width: 165px;
+      height: 165px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -182,8 +186,8 @@
     }
 
     .profile-cat-img {
-      max-width: 160px;
-      max-height: 160px;
+      max-width: 155px;
+      max-height: 155px;
       width: auto;
       height: auto;
       display: block;
@@ -194,12 +198,12 @@
     }
 
     .profile-photo-frame {
-      width: 220px;
-      height: 300px;
+      width: 245px;
+      height: 330px;
       margin: 0 auto;
       border: 2px solid #f29b1f;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.78);
+      background: rgba(255, 255, 255, 0.82);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -217,25 +221,28 @@
     }
 
     .section-title {
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       color: #ef78a8;
-      font-size: 27px;
+      font-size: 40px;
       letter-spacing: 1px;
+      font-weight: 400;
     }
 
     .profile-list {
-      font-size: 19px;
-      color: #ef78a8;
-      font-weight: 700;
+      font-size: 24px;
+      color: #f28aa9;
+      font-weight: 400;
       width: 100%;
+      line-height: 1.9;
+      letter-spacing: 1px;
     }
 
     .profile-list p {
-      margin: 7px 0;
+      margin: 8px 0;
     }
 
     .orange {
-      color: #e09014;
+      color: #ee9b18;
     }
 
     .card {
@@ -244,7 +251,7 @@
       border-radius: 22px;
       padding: 22px;
       margin-top: 16px;
-      transform: rotate(-0.25deg);
+      transform: rotate(-0.2deg);
     }
 
     .card p {
@@ -278,12 +285,12 @@
     .item h3 {
       margin: 0 0 6px;
       color: #e09014;
-      font-size: 20px;
+      font-size: 21px;
+      font-weight: 400;
     }
 
     .time {
       color: #ef78a8;
-      font-weight: 700;
       font-size: 15px;
     }
 
@@ -315,8 +322,7 @@
       border-radius: 45% 55% 50% 50% / 52% 48% 55% 45%;
       background: #ffeaf4;
       color: #ff78af;
-      font-size: 25px;
-      font-weight: 800;
+      font-size: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -342,7 +348,6 @@
     .days {
       font-size: 54px;
       color: #f081ae;
-      font-weight: 800;
       letter-spacing: 2px;
       line-height: 1.1;
     }
@@ -365,7 +370,6 @@
       margin-top: 18px;
       color: #e09014;
       font-size: 32px;
-      font-weight: 800;
       letter-spacing: 4px;
       transform: rotate(-1deg);
     }
@@ -382,9 +386,25 @@
       text-align: center;
       padding: 22px;
       font-size: 16px;
-      font-weight: 700;
       position: relative;
       z-index: 1;
+    }
+
+    .hero h1,
+    .hero p,
+    .hero-btn,
+    nav a,
+    .section-title,
+    .profile-list,
+    .item h3,
+    .card p,
+    .card li,
+    .contact p,
+    footer,
+    .love-icon,
+    .days,
+    .loading-text {
+      font-family: "ZCOOL KuaiLe", "Ma Shan Zheng", "YouYuan", "PingFang SC", "Microsoft YaHei", sans-serif;
     }
 
     @media (max-width: 900px) {
@@ -395,8 +415,8 @@
       }
 
       .profile-photo-frame {
-        width: 220px;
-        height: 285px;
+        width: 240px;
+        height: 320px;
       }
     }
 
@@ -417,11 +437,19 @@
       }
 
       .hero h1 {
-        font-size: 25px;
+        font-size: 24px;
       }
 
       .hero h1 .mili-word {
-        font-size: 40px;
+        font-size: 42px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .profile-list {
+        font-size: 20px;
       }
 
       .love-row {
@@ -478,8 +506,8 @@
         <h2 class="section-title">Profile</h2>
         <div class="profile-list">
           <p>姓名：<span class="orange">陈萱语</span></p>
-          <p>本科：吉林外国语大学</p>
-          <p>研究生：中央民族大学</p>
+          <p>本科：吉林外国语大学（本科）</p>
+          <p>研究生：中央民族大学（硕士）</p>
           <p>专业方向：<span class="orange">教育学 & 英语辅修</span></p>
           <p>外语水平：<span class="orange">CET-6</span></p>
           <p>导师：<span class="orange">保密</span></p>
