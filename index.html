@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>米粒的世界</title>
+  <title>米粒的世界 | 陈萱语</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -22,9 +18,7 @@
       line-height: 1.8;
     }
 
-    a {
-      text-decoration: none;
-    }
+    a { text-decoration: none; }
 
     .page {
       max-width: 1040px;
@@ -37,7 +31,6 @@
       position: relative;
     }
 
-    /* 手绘边框感 */
     .page::before,
     .page::after {
       content: "";
@@ -72,8 +65,8 @@
     }
 
     .hero-cat {
-      width: 110px;
-      height: 90px;
+      width: 112px;
+      height: 92px;
       margin: 0 auto 16px;
       background: #fff8fc;
       border: 4px solid #f29b1f;
@@ -126,17 +119,15 @@
     }
 
     nav a {
-      padding: 14px 34px;
+      padding: 14px 28px;
       color: #e38b17;
       font-weight: 800;
-      font-size: 20px;
+      font-size: 19px;
       border-right: 3px solid #f29b1f;
       transition: all 0.2s ease;
     }
 
-    nav a:last-child {
-      border-right: none;
-    }
+    nav a:last-child { border-right: none; }
 
     nav a:hover {
       background: #ffe5f1;
@@ -184,18 +175,14 @@
     }
 
     .profile-list {
-      font-size: 22px;
+      font-size: 21px;
       color: #ef78a8;
       font-weight: 700;
     }
 
-    .profile-list p {
-      margin: 8px 0;
-    }
+    .profile-list p { margin: 8px 0; }
 
-    .orange {
-      color: #e09014;
-    }
+    .orange { color: #e09014; }
 
     .card {
       background: #fff8fb;
@@ -203,16 +190,47 @@
       border-radius: 22px;
       padding: 24px;
       margin-top: 18px;
-      transform: rotate(-0.5deg);
+      transform: rotate(-0.35deg);
     }
 
     .card p {
-      margin: 0;
-      font-size: 19px;
+      margin: 0 0 10px;
+      font-size: 18px;
       color: #84556a;
     }
 
-    /* 手绘 296 天模块 */
+    .card ul {
+      margin: 6px 0 0;
+      padding-left: 24px;
+      font-size: 18px;
+      color: #84556a;
+    }
+
+    .card li { margin: 8px 0; }
+
+    .item {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px dashed #ffd2e5;
+    }
+
+    .item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .item h3 {
+      margin: 0 0 6px;
+      color: #e09014;
+      font-size: 22px;
+    }
+
+    .time {
+      color: #ef78a8;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
     .love-section {
       text-align: center;
       background: #fff;
@@ -250,13 +268,8 @@
       box-shadow: 0 4px 12px rgba(255, 160, 200, 0.2);
     }
 
-    .love-icon.left {
-      transform: rotate(-6deg);
-    }
-
-    .love-icon.right {
-      transform: rotate(6deg);
-    }
+    .love-icon.left { transform: rotate(-6deg); }
+    .love-icon.right { transform: rotate(6deg); }
 
     .love-center {
       min-width: 220px;
@@ -365,14 +378,18 @@
     <header class="hero" id="home">
       <div class="hero-cat">🎀</div>
       <h1>欢迎来到米粒的世界</h1>
-      <p>点击进入一颗粉色小星球</p>
+      <p>教育、成长、热爱与一点点粉色魔法</p>
       <a class="hero-btn" href="#profile">点击进入</a>
     </header>
 
     <nav>
       <a href="#home">网站首页</a>
-      <a href="#profile">介绍</a>
-      <a href="#about">简介</a>
+      <a href="#profile">Profile</a>
+      <a href="#teaching">实习经历</a>
+      <a href="#work">学生工作</a>
+      <a href="#papers">论文发表</a>
+      <a href="#awards">获奖情况</a>
+      <a href="#love">小世界</a>
       <a href="#contact">联系方式</a>
     </nav>
 
@@ -382,9 +399,11 @@
       <div>
         <h2 class="section-title">Profile</h2>
         <div class="profile-list">
-          <p>吉林外国语大学 · 本科</p>
-          <p>中央民族大学 · 硕士</p>
-          <p>研究方向：<span class="orange">教育学</span></p>
+          <p>姓名：<span class="orange">陈萱语</span></p>
+          <p>本科：吉林外国语大学</p>
+          <p>研究生：中央民族大学</p>
+          <p>专业方向：<span class="orange">教育学 & 英语辅修</span></p>
+          <p>外语水平：<span class="orange">CET-6</span></p>
           <p>导师：<span class="orange">保密</span></p>
         </div>
       </div>
@@ -394,13 +413,100 @@
       <h2 class="section-title">关于米粒</h2>
       <div class="card">
         <p>
-          这里是米粒的个人主页。她喜欢温柔、可爱、粉色和充满生命力的小世界。
-          目前正在教育学方向继续学习，希望把成长、教育、热爱和生活都慢慢记录下来。
+          这里是米粒的个人主页。她本科就读于吉林外国语大学，研究生阶段将在中央民族大学继续深耕教育学方向。
+          她关注教育实践、英语教学、劳动教育、AI 教学与儿童成长，希望把教育里的温柔、耐心和创造力慢慢记录下来。
         </p>
       </div>
     </section>
 
-    <section class="love-section">
+    <section id="teaching">
+      <h2 class="section-title">实习经历</h2>
+
+      <div class="card">
+        <div class="item">
+          <h3>吉林省长春市明泽学校｜小学助教老师</h3>
+          <div class="time">2025.05 – 2025.06</div>
+          <ul>
+            <li>协助维护 46 人班级课堂纪律，通过课间前置提醒等方式，帮助学生提升课堂专注度。</li>
+            <li>负责 2 个班 80 余份作业批改与听写复盘，标注易错点并反馈给班主任，帮助学生巩固知识点。</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>浙江省义乌市牧云教育｜小学英语老师</h3>
+          <div class="time">2024.11 – 2025.04</div>
+          <ul>
+            <li>承担 2 个三年级班英语教学，设计词汇与句型教案，提升学生课堂知识达标率。</li>
+            <li>策划单词接龙、情景对话等互动活动，提升课堂参与率与学生满意度。</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>联合国发展计划署“她 X 数字未来创造营”｜AI 教学志愿者</h3>
+          <div class="time">2024.07 – 2024.08</div>
+          <ul>
+            <li>协助开展乡村与流动社区青少年的 AI 基础课程，覆盖 80 余名学员。</li>
+            <li>整理 AI 教学素材、记录学习反馈，支持公益教育项目落地。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2 class="section-title">学生工作</h2>
+
+      <div class="card">
+        <div class="item">
+          <h3>吉林外国语大学校团委宣传部部长</h3>
+          <div class="time">2024.09 – 2025.06</div>
+          <ul>
+            <li>组织活动宣传，撰写海报文案、活动通知与新媒体内容，保障宣传物料与活动主题精准匹配。</li>
+            <li>搭建活动数据跟踪体系，分析宣传触达与参与情况，优化宣传渠道。</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>吉林外国语大学演讲与口才俱乐部部长</h3>
+          <div class="time">2023.09 – 2025.06</div>
+          <ul>
+            <li>组织成员开展演讲训练与表达实践，提升成员沟通表达与逻辑思维能力。</li>
+            <li>通过模拟场景、即时反馈和小组合作，营造积极自信的学习氛围。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="papers">
+      <h2 class="section-title">论文发表</h2>
+
+      <div class="card">
+        <ul>
+          <li>
+            《优秀劳动教育教师的培育——基于劳动教育目标的素质结构与培育路径研究》
+          </li>
+          <li>
+            《小学语文课程与劳动教育融合路径研究》
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2 class="section-title">获奖情况</h2>
+
+      <div class="card">
+        <ul>
+          <li>2025 年中国国际大学生创新大赛国家铜奖</li>
+          <li>2024 年全国大学生英语翻译大赛国家一等奖</li>
+          <li>2024 年全国大学生外语词汇大赛国家三等奖</li>
+          <li>2025 年“挑战杯”吉林省大学生课外学术科技作品竞赛吉林省金奖</li>
+          <li>2024 年“田家炳杯”吉林师范生教师能力大赛吉林省一等奖</li>
+          <li>吉林外国语大学校一等奖学金</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="love-section" id="love">
       <div class="love-wrap">
         <div class="love-row">
           <div class="love-icon left">小鱼</div>
@@ -448,7 +554,7 @@
     <section id="contact" class="contact">
       <h2 class="section-title">联系方式</h2>
       <div class="card">
-        <p>邮箱：后续补充</p>
+        <p>邮箱：2534009829@qq.com</p>
         <p>小世界入口：正在建设中...</p>
       </div>
     </section>
