@@ -31,7 +31,7 @@
     }
 
     .page {
-      max-width: 1120px;
+      max-width: 1280px;
       margin: 24px auto;
       background: #fff9fc;
       border: 5px solid #f39a16;
@@ -137,39 +137,46 @@
 
     .profile {
       display: grid;
-      grid-template-columns: 370px 390px 245px;
+      grid-template-columns: 430px 430px 260px;
       justify-content: center;
-      align-items: center;
-      gap: 18px;
-      padding: 46px 28px;
+      align-items: stretch;
+      gap: 24px;
+      padding: 46px 32px;
       background:
         radial-gradient(circle, rgba(255, 205, 229, 0.85) 0 12px, transparent 13px) 0 0 / 58px 58px,
         #fffafc;
     }
 
     .profile-kitty {
-      width: 355px;
-      height: 355px;
+      min-height: 520px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 2px solid rgba(255, 180, 215, 0.55);
+      border-radius: 24px;
+      box-shadow: 0 6px 18px rgba(255, 184, 210, 0.18);
       display: flex;
       align-items: center;
       justify-content: center;
-      transform: rotate(-2deg);
+      padding: 18px;
+      transform: rotate(-1deg);
     }
 
     .profile-kitty img {
-      max-width: 345px;
-      max-height: 345px;
-      width: auto;
+      width: 410px;
+      max-width: 100%;
       height: auto;
       display: block;
     }
 
     .profile-card {
+      min-height: 520px;
       background: rgba(255, 255, 255, 0.94);
       border: 2px solid rgba(255, 180, 215, 0.55);
       border-radius: 24px;
-      padding: 22px 28px;
+      padding: 28px 32px;
       box-shadow: 0 6px 18px rgba(255, 184, 210, 0.18);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .profile-list {
@@ -188,8 +195,9 @@
     }
 
     .photo-frame {
-      width: 230px;
-      height: 320px;
+      width: 250px;
+      height: 350px;
+      align-self: center;
       border: 2px solid #f39a16;
       border-radius: 20px;
       background: rgba(255, 255, 255, 0.92);
@@ -358,7 +366,7 @@
       font-size: 16px;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1100px) {
       .profile {
         grid-template-columns: 1fr;
         text-align: center;
@@ -366,20 +374,29 @@
       }
 
       .profile-kitty {
+        min-height: auto;
+        width: 430px;
+        max-width: 100%;
         margin: 0 auto;
-        width: 310px;
-        height: 310px;
+        padding: 20px;
       }
 
       .profile-kitty img {
-        max-width: 295px;
-        max-height: 295px;
+        width: 380px;
+        max-width: 100%;
+      }
+
+      .profile-card {
+        min-height: auto;
+        width: 430px;
+        max-width: 100%;
+        margin: 0 auto;
       }
 
       .photo-frame {
         margin: 0 auto;
-        width: 230px;
-        height: 310px;
+        width: 250px;
+        height: 350px;
       }
     }
 
@@ -413,6 +430,10 @@
 
       .profile-list {
         font-size: 20px;
+      }
+
+      .profile-kitty img {
+        width: 320px;
       }
 
       .love-row {
