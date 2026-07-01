@@ -10,89 +10,128 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: "Comic Sans MS", "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #fff5fb;
-      color: #75465c;
+      background: #fff7fb;
+      color: #7a4b61;
       line-height: 1.8;
     }
 
+    a {
+      text-decoration: none;
+    }
+
     .page {
-      max-width: 980px;
-      margin: 30px auto;
+      max-width: 1040px;
+      margin: 24px auto;
       background: #fffdfd;
-      border: 8px solid #f2a11f;
-      border-radius: 24px;
+      border: 8px solid #f29b1f;
+      border-radius: 30px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(255, 173, 210, 0.35);
+      box-shadow: 0 10px 30px rgba(255, 180, 210, 0.25);
+      position: relative;
+    }
+
+    /* 手绘边框感 */
+    .page::before,
+    .page::after {
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      border: 3px solid rgba(242, 155, 31, 0.25);
+      border-radius: 28px;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+    }
+
+    .page::after {
+      left: 18px;
+      right: 18px;
+      top: 18px;
+      bottom: 18px;
+      border-color: rgba(255, 170, 200, 0.18);
     }
 
     .hero {
       background:
-        radial-gradient(circle at 20% 20%, rgba(255, 187, 220, 0.55), transparent 28%),
-        radial-gradient(circle at 80% 40%, rgba(255, 218, 235, 0.8), transparent 30%),
-        #ffd9ec;
+        radial-gradient(circle at 18% 20%, rgba(255, 182, 213, 0.45), transparent 22%),
+        radial-gradient(circle at 80% 30%, rgba(255, 210, 230, 0.6), transparent 24%),
+        linear-gradient(to bottom, #ffdceb, #ffeaf4);
       text-align: center;
-      padding: 52px 24px 36px;
-      border-bottom: 5px solid #f2a11f;
+      padding: 52px 20px 34px;
+      border-bottom: 5px solid #f29b1f;
+      position: relative;
+      z-index: 1;
     }
 
-    .cat-box {
+    .hero-cat {
       width: 110px;
       height: 90px;
-      margin: 0 auto 20px;
-      border: 4px solid #f2a11f;
-      border-radius: 16px;
-      background: #fff8fb;
+      margin: 0 auto 16px;
+      background: #fff8fc;
+      border: 4px solid #f29b1f;
+      border-radius: 18px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 48px;
+      font-size: 46px;
+      color: #ef78a8;
+      transform: rotate(-2deg);
     }
 
-    h1 {
+    .hero h1 {
       margin: 0;
-      color: #ef7aa7;
       font-size: 42px;
+      color: #ef78a8;
       letter-spacing: 4px;
-      text-shadow: 2px 2px 0 #fff2a8;
+      text-shadow: 2px 2px 0 #fff2a6;
     }
 
     .hero p {
-      margin: 12px 0 0;
-      color: #e18a17;
+      margin: 10px 0 0;
+      color: #e09014;
       font-size: 20px;
       font-weight: 700;
     }
 
-    .enter-btn {
+    .hero-btn {
       display: inline-block;
       margin-top: 18px;
       padding: 8px 24px;
-      background: #ff8fbe;
-      color: white;
       border-radius: 999px;
-      border: 3px solid #f2a11f;
-      text-decoration: none;
+      background: #ff94bf;
+      color: #fff;
+      border: 3px solid #f29b1f;
       font-weight: 700;
+      font-size: 16px;
+      transform: rotate(-1deg);
+      box-shadow: 0 4px 10px rgba(255, 145, 190, 0.25);
     }
 
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background: #fff3fa;
-      border-bottom: 5px solid #f2a11f;
+      background: #fff5fb;
+      border-bottom: 5px solid #f29b1f;
+      position: relative;
+      z-index: 1;
     }
 
     nav a {
-      padding: 14px 38px;
-      color: #e18a17;
-      text-decoration: none;
+      padding: 14px 34px;
+      color: #e38b17;
       font-weight: 800;
       font-size: 20px;
-      border-right: 3px solid #f2a11f;
+      border-right: 3px solid #f29b1f;
+      transition: all 0.2s ease;
     }
 
     nav a:last-child {
@@ -100,48 +139,53 @@
     }
 
     nav a:hover {
-      background: #ffe0ef;
-      color: #ef5f9c;
+      background: #ffe5f1;
+      color: #ef5c9b;
     }
 
     section {
-      padding: 42px 54px;
-      border-bottom: 4px solid #f2a11f;
+      padding: 42px 52px;
+      border-bottom: 4px solid #f29b1f;
+      position: relative;
+      z-index: 1;
     }
 
     .profile {
       display: grid;
-      grid-template-columns: 220px 1fr;
+      grid-template-columns: 240px 1fr;
       gap: 36px;
       align-items: center;
       background:
-        radial-gradient(circle, #ffd2e7 12%, transparent 13%) 0 0 / 34px 34px,
-        #fffaff;
+        radial-gradient(circle, rgba(255, 207, 226, 0.55) 8%, transparent 9%) 0 0 / 34px 34px,
+        #fffafc;
     }
 
-    .kitty {
-      width: 190px;
-      height: 190px;
-      border-radius: 28px;
-      background: white;
-      border: 4px solid #ff9bc6;
+    .profile-avatar {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      border-radius: 30px;
+      background: #fff;
+      border: 4px solid #ff9dc7;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 82px;
-      box-shadow: 0 6px 18px rgba(255, 150, 200, 0.25);
+      color: #ff8fbd;
+      transform: rotate(-2deg);
+      box-shadow: 0 6px 18px rgba(255, 165, 205, 0.24);
     }
 
-    h2 {
+    .section-title {
       margin: 0 0 18px;
-      color: #ef7aa7;
+      color: #ef78a8;
       font-size: 34px;
       letter-spacing: 2px;
     }
 
     .profile-list {
       font-size: 22px;
-      color: #ef7aa7;
+      color: #ef78a8;
       font-weight: 700;
     }
 
@@ -150,63 +194,135 @@
     }
 
     .orange {
-      color: #e18a17;
+      color: #e09014;
     }
 
     .card {
       background: #fff8fb;
-      border: 3px dashed #ffacd0;
+      border: 3px dashed #ffafd2;
       border-radius: 22px;
       padding: 24px;
       margin-top: 18px;
+      transform: rotate(-0.5deg);
     }
 
-    .loading {
+    .card p {
+      margin: 0;
+      font-size: 19px;
+      color: #84556a;
+    }
+
+    /* 手绘 296 天模块 */
+    .love-section {
       text-align: center;
-      padding: 70px 24px;
       background: #fff;
+      padding-top: 48px;
+      padding-bottom: 56px;
     }
 
-    .loading-icons {
+    .love-wrap {
+      max-width: 620px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .love-row {
       display: flex;
+      align-items: flex-start;
       justify-content: center;
-      gap: 80px;
-      color: #ff9bc6;
-      font-size: 42px;
-      margin-bottom: 20px;
+      gap: 90px;
+      margin-bottom: 8px;
+    }
+
+    .love-icon {
+      width: 82px;
+      height: 82px;
+      border: 4px solid #ff92c2;
+      border-radius: 45% 55% 50% 50% / 52% 48% 55% 45%;
+      background: #ffeaf4;
+      color: #ff78af;
+      font-size: 25px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(255, 160, 200, 0.2);
+    }
+
+    .love-icon.left {
+      transform: rotate(-6deg);
+    }
+
+    .love-icon.right {
+      transform: rotate(6deg);
+    }
+
+    .love-center {
+      min-width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .days {
-      font-size: 34px;
-      color: #ef7aa7;
+      font-size: 56px;
+      color: #f081ae;
       font-weight: 800;
+      letter-spacing: 2px;
+      line-height: 1.1;
     }
 
     .heart {
-      font-size: 32px;
-      color: #ff80b5;
+      margin-top: 2px;
+      font-size: 34px;
+      color: #ff7eae;
+      line-height: 1;
+    }
+
+    .heartbeat {
+      width: 100%;
+      height: 42px;
+      margin: 6px auto 18px;
+      display: block;
     }
 
     .loading-text {
-      margin-top: 28px;
-      color: #e18a17;
+      margin-top: 18px;
+      color: #e09014;
       font-size: 34px;
       font-weight: 800;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
+      transform: rotate(-1deg);
+    }
+
+    .contact p {
+      margin: 8px 0;
+      font-size: 19px;
+      color: #84556a;
     }
 
     footer {
-      padding: 24px;
+      background: #fff2f9;
+      color: #c47922;
       text-align: center;
-      color: #c47a21;
-      background: #fff3fa;
+      padding: 22px;
+      font-size: 17px;
       font-weight: 700;
+      position: relative;
+      z-index: 1;
     }
 
-    @media (max-width: 760px) {
+    @media (max-width: 780px) {
       .page {
         margin: 0;
         border-radius: 0;
+      }
+
+      nav a {
+        width: 50%;
+        text-align: center;
+        border-bottom: 3px solid #f29b1f;
       }
 
       .profile {
@@ -214,18 +330,30 @@
         text-align: center;
       }
 
-      .kitty {
-        margin: 0 auto;
+      .profile-avatar {
+        margin-bottom: 10px;
       }
 
       section {
         padding: 34px 24px;
       }
 
-      nav a {
-        width: 50%;
-        text-align: center;
-        border-bottom: 3px solid #f2a11f;
+      .love-row {
+        gap: 28px;
+      }
+
+      .love-icon {
+        width: 66px;
+        height: 66px;
+        font-size: 20px;
+      }
+
+      .days {
+        font-size: 42px;
+      }
+
+      .loading-text {
+        font-size: 28px;
       }
     }
   </style>
@@ -235,10 +363,10 @@
   <div class="page">
 
     <header class="hero" id="home">
-      <div class="cat-box">🐱</div>
+      <div class="hero-cat">🎀</div>
       <h1>欢迎来到米粒的世界</h1>
       <p>点击进入一颗粉色小星球</p>
-      <a class="enter-btn" href="#profile">点击进入</a>
+      <a class="hero-btn" href="#profile">点击进入</a>
     </header>
 
     <nav>
@@ -249,10 +377,10 @@
     </nav>
 
     <section class="profile" id="profile">
-      <div class="kitty">🎀</div>
+      <div class="profile-avatar">🐱</div>
 
       <div>
-        <h2>Profile</h2>
+        <h2 class="section-title">Profile</h2>
         <div class="profile-list">
           <p>吉林外国语大学 · 本科</p>
           <p>中央民族大学 · 硕士</p>
@@ -263,7 +391,7 @@
     </section>
 
     <section id="about">
-      <h2>关于米粒</h2>
+      <h2 class="section-title">关于米粒</h2>
       <div class="card">
         <p>
           这里是米粒的个人主页。她喜欢温柔、可爱、粉色和充满生命力的小世界。
@@ -272,19 +400,53 @@
       </div>
     </section>
 
-    <section class="loading">
-      <div class="loading-icons">
-        <span>🎙️</span>
-        <span>👓</span>
-      </div>
+    <section class="love-section">
+      <div class="love-wrap">
+        <div class="love-row">
+          <div class="love-icon left">小鱼</div>
 
-      <div class="days">296 天</div>
-      <div class="heart">♡</div>
-      <div class="loading-text">加载中...</div>
+          <div class="love-center">
+            <div class="days">296天</div>
+            <div class="heart">♡</div>
+          </div>
+
+          <div class="love-icon right">米粒</div>
+        </div>
+
+        <svg class="heartbeat" viewBox="0 0 620 42" preserveAspectRatio="none">
+          <path
+            d="M10 22
+               L80 22
+               L105 16
+               L128 28
+               L158 10
+               L188 22
+               L248 22
+               L270 22
+               L286 8
+               L300 34
+               L318 6
+               L338 22
+               L400 22
+               L430 18
+               L455 26
+               L482 12
+               L512 22
+               L610 22"
+            fill="none"
+            stroke="#f6cadd"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <div class="loading-text">加载中...</div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>联系方式</h2>
+    <section id="contact" class="contact">
+      <h2 class="section-title">联系方式</h2>
       <div class="card">
         <p>邮箱：后续补充</p>
         <p>小世界入口：正在建设中...</p>
