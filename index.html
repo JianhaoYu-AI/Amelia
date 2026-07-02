@@ -173,24 +173,23 @@
     }
 
     .direct-photo {
-      width: 100%;
-      height: 560px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 820px;
+      max-width: 100%;
+      height: auto;
+      display: block;
       border: 5px solid #f39a16;
       border-radius: 28px;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.86);
+      background: transparent;
       box-shadow: 0 8px 22px rgba(180, 120, 150, 0.16);
     }
 
     .direct-photo img {
       width: 100%;
-      height: 100%;
-      object-fit: contain;
+      height: auto;
+      object-fit: initial;
       display: block;
-      background: rgba(255, 255, 255, 0.92);
+      background: transparent;
     }
 
     nav {
@@ -400,7 +399,7 @@
       .direct-photo {
         width: 820px;
         max-width: 100%;
-        height: 560px;
+        height: auto;
         margin: 0 auto;
       }
     }
@@ -444,7 +443,7 @@
 
       .direct-photo {
         width: 100%;
-        height: 430px;
+        height: auto;
       }
 
       nav a {
